@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel = "stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+
+    <title>Student Management MiniApp</title>
+</head>
+<body>
+    <script src = "index.js"></script>
+
+    <!--Navigasi-->
+<nav class="navbar container-fluid navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Student Management MiniApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home </a>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+ 
+  <!--Judul App-->
+  <div class ="container-sm mt-3"> 
+    <h1>Student Management MiniApp</h1>
+</div>
+<hr>
+
+<!--Isi form-->
+<div class = "container-sm mt-3">
+  <h4>Add Student</h4>
+</div>
+
+<!--Button Show and hide-->
+<div class ="container-sm mt-3">
+     <a href="#" class="btn btn-default btn-sm border" id="show-button">Show Form Add New Student</a>
+  </div>
+ <br>
+
+ <!--Form bagian 1-->
+ <div class="container-sm mt-3">
+  <div class = "row">
+    <div class="col-5">
+        <form>
+          <div class ="mb-3">
+            <label for="nim">Student ID (NIM)</label>
+            <input type="text" class="form-control" id="nim" placeholder="105021810001" required="">
+          </div>
+          <div class="mb-3">
+            <label for="FullName">Full Name</label>
+            <input type="text" class="form-control" id="nama" placeholder="John Doe" required="">
+          </div>
+            <br>
+  
+            <label>Gender</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+              <label class="form-check-label" for="female">
+              Female
+              </label>
+              </div>
+  <br>
+            
+  <div class="form-group mt-2">
+    <label for="faculty">Faculty</label>
+    <select class="form-select mt-2" id="faculty-form" aria-label="Default select example">
+
+      <option selected>--SELECT FACULTY--</option>
+      <option value="1">Pascasarjana</option>
+    <option value="2">Fakultas Filsafat</option>
+    <option value="3">Fakultas Keguruan dan Ilmu Pendidikan</option>
+    <option value="4">Fakultas Ekonomi dan Bisnis</option>
+    <option value="5">Fakultas Pertanian</option>
+    <option value="6">Fakultas Ilmu Komputer</option>
+    <option value="7">Fakultas Keperawatan</option>
+    <option value="8">Akademi Sekertari Manajemen Indonesia Klabat</option>
+    </select>
+
+  </div>
+                  
+              <br>
+              <label for="program-study">Program of Study</label>
+              <select class="form-select" id="program-study-form" aria-label="Default select example 2">
+                <option selected>--SELECT PROGRAM STUDY--</option>
+                <option>Megister Manajemen</option>
+                <option>Megister Teologi</option>
+                <option>Ilmu Filsafat</option>
+                <option>Pendidikan Agama</option>
+                <option>Pendidikan Bahasa Inggris</option>
+                <option>Pendidikan Ekonomi</option>
+                <option>Pendidikan Luar Sekolah</option>
+                <option>Akuntasi</option>
+                <option>Manajemen</option>
+                <option>Agroteknologi</option>
+                <option>Informatika</option>
+                <option>Sistem Informasi</option>
+                <option>Profesi Ners</option>
+                <option>Keperawatan</option>
+                <option>Sekretari (D3)</option>
+
+              </select>
+
+              <br>
+                <a href="#" class="btn btn-default btn-lg border" id="submit">Add Student</a>
+              
+      </div>
+
+      <!--Form bagian kedua-->
+        <div class ="col-6">
+          <h4>Filter Student by </h4>
+          
+
+          <form>
+            <div class="form-group mt-2">
+              <label for="filter-faculty">Faculty</label>
+
+              <select class="form-select mt-2" id="filter-faculty" aria-label="Default select example">
+  
+                <option selected>--SELECT FACULTY--</option>
+                <option value="1">Pascasarjana</option>
+              <option value="2">Fakultas Filsafat</option>
+              <option value="3">Fakultas Keguruan dan Ilmu Pendidikan</option>
+              <option value="4">Fakultas Ekonomi dan Bisnis</option>
+              <option value="5">Fakultas Pertanian</option>
+              <option value="6">Fakultas Ilmu Komputer</option>
+              <option value="7">Fakultas Keperawatan</option>
+              <option value="8">Akademi Sekertari Manajemen Indonesia Klabat</option>
+              </select>
+              
+              <button type="button" class="btn btn-default btn-sm border mt-3" id="filter-faculty-button">Show Student</button>
+            </div>
+          </form>
+        <br>
+          <form>
+            <div class="form-group mt-2">
+              <label for="program-study">Program of Study</label>
+              <select class="form-select" id="program-study-form" aria-label="Default select example 2">
+                <option selected>--SELECT PROGRAM STUDY--</option>
+                <option>Megister Manajemen</option>
+                <option>Megister Teologi</option>
+                <option>Ilmu Filsafat</option>
+                <option>Pendidikan Agama</option>
+                <option>Pendidikan Bahasa Inggris</option>
+                <option>Pendidikan Ekonomi</option>
+                <option>Pendidikan Luar Sekolah</option>
+                <option>Akuntasi</option>
+                <option>Manajemen</option>
+                <option>Agroteknologi</option>
+                <option>Informatika</option>
+                <option>Sistem Informasi</option>
+                <option>Profesi Ners</option>
+                <option>Keperawatan</option>
+                <option>Sekretari (D3)</option>
+              </select>
+
+              <button type="button" class="btn btn-default btn-sm border mt-3" id="filter-program-study-button">Show Student</button>
+            </div>
+          </form>
+
+
+
+
+        </div>
+
+   </div>
+ </div>
+<br>
+<hr>
+<br>
+<!--Hasil dari form diatas -->
+<h2 class="text-center">Our Students</h2>
+<br>
+
+<div class="container">
+  <input class="form-control" type="text" placeholder="Search Student by Name..." aria-label="Search">
+</div>
+ </div>
+
+<div class="row pt-4 mt-4 container-fluid" >
+  <table name="tabel" class="table table-striped table-dark" id="user"> 
+    <tr>
+      <td>Student ID (NIM)</td>
+      <td>Full Name</td>
+      <td>Gender</td>
+      <td>Faculty</td>
+      <td>Program of Study</td>
+      <td>Action</td>
+    </tr>
+
+    <tr>
+      <td>105011810001</td>
+      <td>John Doe</td>
+      <td>Male</td>
+      <td>FIK</td>
+      <td>Sistem Informasi</td>
+      <td><a href="#" class="link-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg></i>
+      </i></td>
+    </tr>
+
+    <tr>
+      <td>103021810001</td>
+      <td>Jack Reacher</td>
+      <td>Male</td>
+      <td>FEB</td>
+      <td>Manajemen</td>
+      <td><a href="#" class="link-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg></td>
+    </tr>
+
+    <tr>
+      <td>105021810002</td>
+      <td>Mery Heather</td>
+      <td>Female</td>
+      <td>FIK</td>
+      <td>Informatika</td>
+      <td><a href="#" class="link-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg></td>
+    </tr>
+
+  </table>
+</div>
+
+<hr>
+<footer>
+  <p class="text-center">Made with js, html, & css.</p>
+  <p class="text-center">Anggreiny Claudia &copy; Front-End Web Development</p>
+</footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+</body>
+</html>
